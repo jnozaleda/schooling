@@ -13,7 +13,7 @@ window.CONFIG = {
   SECRETO: "cambia-esto",
 
   // Quiénes hacéis la revisión. Cambia los nombres a vuestro gusto.
-  REVISORES: ["Noza", "Marta"],
+  REVISORES: ["Noza", "Maite"],
 
   // Tu casa. Si dejas lat/lng en null se geocodifica sola la primera vez.
   CASA: {
