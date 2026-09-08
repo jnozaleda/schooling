@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Colegios · Infantil 2027–2028</title>
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Colegios · Infantil 2027–2028</h1>
+    <div class="sub" id="homelabel">Casa: Avenida de las Piceas 12</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="who">
+    <span>Reseñando como</span>
+    <select id="who"></select>
+  </div>
+  <span id="sync">···</span>
+</header>
+
+<div class="banner" id="banner" hidden></div>
+
+<div class="toolbar">
+  <div class="filtros" id="filtros">
+    <div class="chips" id="statuschips">
+      <button class="chip" data-st="none"      aria-pressed="true"><span class="dot"></span>Sin ver</button>
+      <button class="chip" data-st="prospect"  aria-pressed="true"><span class="dot"></span>Candidato</button>
+      <button class="chip" data-st="approved"  aria-pressed="true"><span class="dot"></span>Aprobado</button>
+      <button class="chip" data-st="discarded" aria-pressed="false"><span class="dot"></span>Descartado</button>
+    </div>
+    <select id="tipo">
+      <option value="">Todos los tipos</option>
+      <option>Público</option><option>Concertado</option><option>Privado</option>
+    </select>
+    <select id="orden">
+      <option value="dist">Por distancia</option>
+      <option value="nota">Por nota</option>
+      <option value="nombre">Por nombre</option>
+    </select>
+    <input id="q" type="search" placeholder="Buscar colegio…">
+  </div>
+  <div class="tbright">
+    <button id="togglefiltros" class="chip">Filtros</button>
+    <div class="viewtabs">
+      <button id="tabmap"  aria-pressed="true">Mapa</button>
+      <button id="tablist" aria-pressed="false">Lista</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main id="main" class="m-map">
+  <div id="map"></div>
+  <div class="maplegend">
+    <div><i style="background:var(--st-none)"></i>Sin ver</div>
+    <div><i style="background:var(--st-prospect)"></i>Candidato</div>
+    <div><i style="background:var(--st-approved)"></i>Aprobado</div>
+    <div><i style="background:var(--st-discarded)"></i>Descartado</div>
+    <div><i style="background:var(--ink);border:2px solid var(--accent)"></i>Casa</div>
+  </div>
+  <aside id="list"></aside>
+  <div id="drawer" aria-hidden="true"></div>
+</main>
+
+<script src="assets/leaflet/leaflet.js"></script>
+<script src="config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
